@@ -110,6 +110,8 @@
         let treasureLoc_column = parseInt(treasureLocation % 5)
         score += 2
         document.getElementById("score").innerHTML = "Score is " + score
+        chestCount++;
+        document.getElementById('chests').innerHTML="Number of chests checked is "+chestCount;
         if(lastCheck_row == treasureLoc_row) {
             if(lastCheck_column < treasureLoc_column) {
                 document.getElementById("help").innerHTML = "Right"
