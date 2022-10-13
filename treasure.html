@@ -100,10 +100,10 @@
       }
 
       function help() {
-        lastCheck_row = parseInt(lastCheck / 5)
-        lastCheck_column = parseInt(lastCheck % 5)
-        treasureLoc_row = parseInt(treasureLocation / 5)
-        treasureLoc_column = parseInt(treasureLocation % 5)
+        let lastCheck_row = parseInt(lastCheck / 5)
+        let lastCheck_column = parseInt(lastCheck % 5)
+        let treasureLoc_row = parseInt(treasureLocation / 5)
+        let treasureLoc_column = parseInt(treasureLocation % 5)
         score += 2
         document.getElementById("score").innerHTML = "Score is " + score
         if(lastCheck_row == treasureLoc_row) {
