@@ -31,6 +31,10 @@
     <div class="col-sm-3" style="background-color:lavenderblush;padding: 3%;" id="help">Help report</div>
   </div>
 </div>
+<br>
+<div class="text-center">
+  <button type="button" class="btn btn-primary" onclick="reset()">New Game</button>
+</div>
 
 <br>
 <div class="container">
@@ -125,6 +129,25 @@
         } else {
             document.getElementById("help").innerHTML = "Sorry, no help available"
         }
+    }
+
+    function generateRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function reset() {
+      chestCount = 0;
+      score = 0;
+      lastCheck = 12;
+      treasureLocation = generateRandomInteger(0, 24);
+      document.getElementById('chests').innerHTML="Number of chests checked is "+chestCount;
+      document.getElementById('score').innerHTML="Score is  "+score;
+      document.getElementById('help').innerHTML="Help report";
+      for (let i = 0; i <= ids.length; i++){
+        if(i!=12){
+          document.getElementById(i).src="starting_chest.png";
+        }
+      }
     }
     </script>
 
